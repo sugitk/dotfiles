@@ -1,0 +1,7 @@
+[color]
+	ui = auto
+[alias]
+  logs = log --oneline --date=short --pretty=format:'%h %cd %an %d %s'
+  logg = log --graph --all --pretty=format:'%Cred%h%Creset %C(bold blue)<%an>%Creset %Cgreen(%cd)%Creset - %C(yellow)%d%Creset %s' --abbrev-commit --date=short
+  logm = log --graph --oneline --decorate=full --remotes --merges
+  undo = "!f() { git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f"
